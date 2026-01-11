@@ -14,4 +14,12 @@ async function loadPartial(elId, url) {
 document.addEventListener('DOMContentLoaded', () => {
   loadPartial('navbar', '/partials/navbar.html');
   loadPartial('footer', '/partials/footer.html');
+
+  // ensure global lightbox script is present (only once)
+  if (!document.querySelector('script[src="/scripts/lightbox.js"]')) {
+    const s = document.createElement('script');
+    s.src = '/scripts/lightbox.js';
+    s.defer = true;
+    document.body.appendChild(s);
+  }
 });

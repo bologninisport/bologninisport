@@ -90,3 +90,8 @@ footer {
 .navbar-toggler:focus {
     box-shadow: none;
 }
+
+.review-stars .bi {
+  font-size: 1.25rem; 
+  line-height: 1;
+}
